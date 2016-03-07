@@ -58,7 +58,7 @@ public abstract class RedditGrab {
 			return (hot? "Hottest" : "Newest") + 
 					" /r/"+params.get(0)+": " + title + " Direct link: " + imageurl + " Comments: https://redd.it/" + commentlink;
 		} catch (Exception e) {
-            e.printStackTrace();
+			e.printStackTrace();
 			return "Something went wrong.";
 		}	
 	}
