@@ -6,7 +6,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.pircbotx.hooks.Listener;
 import org.pircbotx.hooks.events.MessageEvent;
@@ -59,6 +58,7 @@ public abstract class RedditGrab {
 			return (hot? "Hottest" : "Newest") + 
 					" /r/"+params.get(0)+": " + title + " Direct link: " + imageurl + " Comments: https://redd.it/" + commentlink;
 		} catch (Exception e) {
+            e.printStackTrace();
 			return "Something went wrong.";
 		}	
 	}
